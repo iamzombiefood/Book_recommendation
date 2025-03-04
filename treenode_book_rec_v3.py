@@ -1,4 +1,5 @@
-
+from data import books
+from dfs import dfs
 
 #tree node
 class BookRec:
@@ -62,19 +63,19 @@ def author_name():
     name = input("Type Author Number.")
     match name:
         case "1":
-            pass
+            print(dfs("Brandon Sanderson", "Mistborn"))
         case "2":
-            pass
+            print(dfs("Isaac Asimov", "Foundation"))
         case "3":
-            pass
+            print(dfs("Jane Austen", "Pride and Prejudice"))
         case "4":
-            pass
+            print(dfs("Sarah J. Maas", "A Court of Thorns and Roses"))
         case "5":
-            pass
+            print(dfs("Shirley Jackson", "The Haunting of Hill House"))
         case "6":
-            pass
+            print(dfs("Stephen King", "The Shining"))
         case "7":
-            pass
+            print(dfs("Ursula K. Le Guin", "A Tale of Earthsea"))
         case _:
             print("Try again.")
             author_name()
@@ -95,13 +96,13 @@ def genre_name():
     name = input("Type Genre Number.")
     match name:
         case "1":
-            pass
+            print(dfs("Sci-fi", "Dune"))
         case "2":
-            pass
+            print(dfs("Fantasy", "The Hobbit"))
         case "3":
-            pass
+            print(dfs("Romance", "The Song of Achilles"))
         case "4":
-            pass
+            print(dfs("Horror", "Dracula"))
         case _:
             print("Try again.")
             author_name()
