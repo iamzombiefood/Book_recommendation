@@ -11,8 +11,9 @@ class BookRec:
         self.children.append(child_node)
     
     def traverse(self):
-        nodes_to_search = [self]
-        while len(nodes_to_search) > 0:
+        nodes_to_search = self
+        print(self.value)
+        while len(nodes_to_search.children) > 0:
             choice = input("Type 1 or 2?")
             if choice not in ["1", "2"]:
                 print("Try again. ")
@@ -20,7 +21,10 @@ class BookRec:
                 choice_index = int(choice)
                 choice_index -= 1
                 choice_child = nodes_to_search.children[choice_index]
-                print(choice_child.value)
+                if callable(choice_child.value):
+                    choice_child.value()
+                else:
+                    print(choice_child.value)
                 nodes_to_search = choice_child
 
 #root
@@ -63,19 +67,27 @@ def author_name():
     name = input("Type Author Number.")
     match name:
         case "1":
-            print(dfs("Brandon Sanderson", "Mistborn"))
+
+            print("We Recommend...")
+            print(dfs(books, "Brandon Sanderson", "Mistborn"))
         case "2":
-            print(dfs("Isaac Asimov", "Foundation"))
+            print("We Recommend...")
+            print(dfs(books, "Isaac Asimov", "Foundation"))
         case "3":
-            print(dfs("Jane Austen", "Pride and Prejudice"))
+            print("We Recommend...")
+            print(dfs(books, "Jane Austen"))
         case "4":
-            print(dfs("Sarah J. Maas", "A Court of Thorns and Roses"))
+            print("We Recommend...")
+            print(dfs(books, "Sarah J. Maas", "A Court of Thorns and Roses"))
         case "5":
-            print(dfs("Shirley Jackson", "The Haunting of Hill House"))
+            print("We Recommend...")
+            print(dfs(books, "Shirley Jackson", "The Haunting of Hill House"))
         case "6":
-            print(dfs("Stephen King", "The Shining"))
+            print("We Recommend...")
+            print(dfs(books, "Stephen King", "The Shining"))
         case "7":
-            print(dfs("Ursula K. Le Guin", "A Tale of Earthsea"))
+            print("We Recommend...")
+            print(dfs(books, "Ursula K. Le Guin", "A Tale of Earthsea"))
         case _:
             print("Try again.")
             author_name()
@@ -83,8 +95,8 @@ def author_name():
 def end():
     print("Thank you for using the Book Recomendation service!")
 
-search_author = BookRec(author_name())
-author_end = BookRec(end())
+search_author = BookRec(author_name)
+author_end = BookRec(end)
 authors.add_child(search_author)
 authors.add_child(author_end)
     
@@ -96,20 +108,24 @@ def genre_name():
     name = input("Type Genre Number.")
     match name:
         case "1":
-            print(dfs("Sci-fi", "Dune"))
+            print("We Recommend...")
+            dfs(books, "Sci-fi", "Dune")
         case "2":
-            print(dfs("Fantasy", "The Hobbit"))
+            print("We Recommend...")
+            dfs(books, "Fantasy", "The Hobbit")
         case "3":
-            print(dfs("Romance", "The Song of Achilles"))
+            print("We Recommend...")
+            dfs(books, "Romance", "The Song of Achilles")
         case "4":
-            print(dfs("Horror", "Dracula"))
+            print("We Recommend...")
+            dfs(books, "Horror", "Dracula")
         case _:
             print("Try again.")
-            author_name()
+            genre_name()
 
-search_genre = BookRec(genre_name())
-genre_end = BookRec(end())
+search_genre = BookRec(genre_name)
+genre_end = BookRec(end)
 genres.add_child(search_genre)
 genres.add_child(genre_end)
 
-
+book_search_root.traverse()

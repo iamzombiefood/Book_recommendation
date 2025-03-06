@@ -1,13 +1,19 @@
-from data import books 
-def dfs(books, current_vertex, target_value, visited = None):
+from data import books
+graph = books
+#target is current vertex
+#value is target value
+
+
+def dfs(graph, target, value, visited = None):
     if visited is None:
-        visted = []
-    visited.append(current_vertex)
-    if current_vertex is target_value:
+        visited = []
+    visited.append(target)
+    if target is value:
         return visited
     
-    for neighbour in books[current_vertex]:
+    for neighbour in graph[target]:
         if neighbour not in visited:
-            path = dfs(books, neighbour, target_value, visited)
+            path = dfs(graph, neighbour, target, visited)
             if path:
                 return path
+    

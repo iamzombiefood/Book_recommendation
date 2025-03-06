@@ -9,7 +9,17 @@ books = {
  "Horror": set(["Stephen King", "Shirley Jackson", "Dracula"]),
  "Sci-fi": set(["Isaac Asimov", "Ursula K. Le Guin", "Brandon Sanderson", "Dune"]),
  "Fantasy": set(["Sarah J. Maas", "Ursula K. Le Guin", "Brandon Sanderson", "The Hobbit"]),
- "Romance": set(["Jane Austen", "Sarah J. Maas", "The Song of Achilles"])
+ "Romance": set(["Jane Austen", "Sarah J. Maas", "The Song of Achilles"]),
+ "The Shining": set([]),
+ "Foundation": set([]),
+ "A Court of Thorns and Roses": set([]),
+ "The Haunting of Hill House": set([]),
+ "A Tale of Earthsea": set([]),
+ "Mistborn": set([]),
+ "Dracula": set([]),
+ "Dune": set([]),
+ "The Hobbit": set([]),
+ "The Song of Achilles": set([])
 }
 
 
