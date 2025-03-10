@@ -1,5 +1,4 @@
-from data import books
-graph = books
+
 #target is current vertex
 #value is target value
 

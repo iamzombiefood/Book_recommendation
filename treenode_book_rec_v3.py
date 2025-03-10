@@ -75,7 +75,7 @@ def author_name():
             print(dfs(books, "Isaac Asimov", "Foundation"))
         case "3":
             print("We Recommend...")
-            print(dfs(books, "Jane Austen"))
+            print(dfs(books, "Jane Austen", "Pride and Prejudice"))
         case "4":
             print("We Recommend...")
             print(dfs(books, "Sarah J. Maas", "A Court of Thorns and Roses"))
@@ -109,16 +109,16 @@ def genre_name():
     match name:
         case "1":
             print("We Recommend...")
-            dfs(books, "Sci-fi", "Dune")
+            print(dfs(books, "Sci-fi", "Dune"))
         case "2":
             print("We Recommend...")
-            dfs(books, "Fantasy", "The Hobbit")
+            print(dfs(books, "Fantasy", "The Hobbit"))
         case "3":
             print("We Recommend...")
-            dfs(books, "Romance", "The Song of Achilles")
+            print(dfs(books, "Romance", "The Song of Achilles"))
         case "4":
             print("We Recommend...")
-            dfs(books, "Horror", "Dracula")
+            print(dfs(books, "Horror", "Dracula"))
         case _:
             print("Try again.")
             genre_name()

@@ -1,26 +1,36 @@
 books = {
- "Stephen King": set(["Horror", "Shirley Jackson", "The Shining"]),
- "Isaac Asimov": set(["Sci-fi", "Ursula K. Le Guin", "Brandon Sanderson", "Foundation"]),
- "Jane Austen": set(["Romance", "Sarah J. Maas", "Pride and Prejudice"]),
- "Sarah J. Maas": set(["Romance", "Fantasy", "Jane Austen", "Ursula K. Le Guin", "Brandon Sanderson", "A Court of Thorns and Roses"]),
- "Shirley Jackson": set(["Horror", "Stephen King", "The Haunting of Hill House"]),
- "Ursula K. Le Guin": set(["Fantasy", "Sci-fi", "Sarah J. Maas", "Brandon Sanderson", "A Tale of Earthsea"]),
- "Brandon Sanderson": set(["Fantasy", "Sci-fi", "Sarah J. Maas", "Ursula K. Le Guin", "Isaac Asimov", "Mistborn"]),
- "Horror": set(["Stephen King", "Shirley Jackson", "Dracula"]),
- "Sci-fi": set(["Isaac Asimov", "Ursula K. Le Guin", "Brandon Sanderson", "Dune"]),
- "Fantasy": set(["Sarah J. Maas", "Ursula K. Le Guin", "Brandon Sanderson", "The Hobbit"]),
- "Romance": set(["Jane Austen", "Sarah J. Maas", "The Song of Achilles"]),
- "The Shining": set([]),
- "Foundation": set([]),
- "A Court of Thorns and Roses": set([]),
- "The Haunting of Hill House": set([]),
- "A Tale of Earthsea": set([]),
- "Mistborn": set([]),
- "Dracula": set([]),
- "Dune": set([]),
- "The Hobbit": set([]),
- "The Song of Achilles": set([])
+    #horror
+    "Stephen King": set(["Horror", "Shirley Jackson"]),
+    "Horror": set(["Shirley Jackson", "The Shining"]),
+    "Shirley Jackson": set(["The Shining", "The Haunting of Hill House"]),
+    "The Haunting of Hill House": set(["Dracula"]),
+    "The Shining": set([]),
+    "Dracula": set([]),
+
+    #scifi
+    "Isaac Asimov": set(["Sci-fi", "Ursula K. Le Guin"]),
+    "Sci-fi": set(["Ursula K. Le Guin", "Foundation"]),
+    "Foundation": set(["Dune"]),
+    "Dune": set([]),
+
+    #fantasy
+    "Ursula K. Le Guin": set(["Fantasy"]),
+    "Brandon Sanderson": set(["Fantasy"]),
+    "Fantasy": set(["Mistborn", "A Tale of Earthsea", "A Court of Thorns and Roses"]),
+    "A Court of Thorns and Roses": set([]),
+    "A Tale of Earthsea": set(["The Hobbit"]),
+    "Mistborn": set([]),
+    "The Hobbit": set([]),
+
+    #romance
+    "Sarah J. Maas": set(["Fantasy", "The Song of Achilles"]),
+    "Jane Austen": set(["Romance"]),
+    "Romance": set(["Pride and Prejudice", "Sarah J. Maas"]),
+    "Pride and Prejudice": set([]),
+    "The Song of Achilles": set([])
+ 
 }
+
 
 
        
