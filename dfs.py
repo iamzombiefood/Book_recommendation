@@ -7,12 +7,12 @@ def dfs(graph, target, value, visited = None):
     if visited is None:
         visited = []
     visited.append(target)
-    if target is value:
+    if target == value:
         return visited
     
     for neighbour in graph[target]:
         if neighbour not in visited:
-            path = dfs(graph, neighbour, target, visited)
+            path = dfs(graph, neighbour, value, visited)
             if path:
                 return path
     
